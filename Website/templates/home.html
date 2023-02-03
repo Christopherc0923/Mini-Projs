@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/home">Add Transaction</a></li>
+      <li><a href="/entries">Entries</a></li>
+    </ul>
+  </nav>
+  <body>
+    <h1>Welcome to the home page!</h1>
+    <p>Here is the result of some_function: {{ result }}</p>
+  </body>
+  <form method="POST" action="/add_transaction">
+    <label for="category">Category:</label><br>
+    <input type="text" id="category" name="category"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount"><br>
+    <label for="description">Description:</label><br>
+    <input type="text" id="description" name="description"><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+</html>

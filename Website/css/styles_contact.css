@@ -1,0 +1,88 @@
+html{
+    font-size: 10px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    background: black;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+form{
+    width: 60vw;
+    min-width: 300px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    border: 2px white solid;
+}
+
+nav {
+    background-color: #333; /* Set the background color of the nav element */
+}
+nav ul {
+    list-style: none; /* Remove the default list styling */
+    margin: 0; /* Remove the default margin */
+    padding: 0; /* Remove the default padding */
+    display: flex; /* Make the list items appear horizontally */
+}
+nav li {
+    /* Style the list items */
+    flex: 1; /* Make the list items take up equal amounts of space */
+}
+nav a {
+    /* Style the links */
+    display: block; /* Make the links fill the entire list item */
+    color: #fff; /* Set the text color of the links */
+    text-decoration: none; /* Remove the default underline */
+    padding: 20px; /* Add some padding to the links */
+    font-size: 1.8rem;
+}
+nav a:hover {
+    /* Style the links when hovered over */
+    background-color: #444; /* Change the background color of the links */
+  }
+
+
+.list, a{
+    color: white;
+}
+
+.list li{
+    display: inline;
+    padding: 0.75rem 2rem 0.75rem 2rem;
+    font-size: 1.5rem;
+}
+
+label{
+    display: block;
+    padding: 0.5rem 0.5rem;
+    font-size: 2rem;
+    text-align: left;
+}
+
+input, textarea, select {
+    margin: 10px 0 0 0;
+	width: 100%;
+    min-height: 2em;
+}
+
+fieldset{
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+fieldset:last-of-type{
+    border-bottom: none;
+}
+
+
+.term{
+    width: unset;
+    margin: 0 0.5rem 0 0;
+    vertical-align: middle;
+    text-align: left;
+}

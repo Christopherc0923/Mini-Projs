@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <title>Christopher Chan's Portfolio</title>
+
+        <!-- external CSS link -->
+        <link rel="stylesheet" href="css/styles_contact.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+      
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="Website HTML.html">About</a></li>
+              <li><a href="Resume.html">Resume</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+        <div class="header">
+            <h1>Email the Developer</h1>
+        </div>
+
+        <div class="form">
+            <form>
+                <fieldset>
+                    <label>First Name: <input name="firstName" type="text" required></label>
+                    <label>Last Name: <input name="lastName" type="text" required></label>
+                </fieldset>
+                <fieldset>
+                    <label>Email Address: <input name="email" type="email" required></label>
+                    <label>Phone Number: <input name="email" type="tel" required></label>
+                </fieldset>
+                <fieldset>
+                    <label>How did you find this website?
+                        <select name="find">
+                            <option value="">Select</option>
+                            <option value=1>LinkedIn</option>
+                            <option value=2>Resume</option>
+                            <option value=3>GitHub</option>
+                            <option value=4>Other</option>
+                        </select>
+                    </label>
+                    <label>Additional Infomation: <textarea name="textBox" rows="3" placeholder="If you have something you like me to know..."></textarea></label>
+                    <label>Upload File: <input name="file" type="file"></label>
+                </fieldset>
+
+                <fieldset>
+                    <label><input class='term' name="term" type="checkbox">I agree to the <a href=''>terms and conditions</a></label>
+                </fieldset>
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+
+    </body>    
+</html>

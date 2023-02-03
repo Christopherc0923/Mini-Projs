@@ -1,0 +1,25 @@
+<!-- Inheriting from main.html in the main project folder-->
+{% extends 'main.html'%}
+{% load static %}
+
+{% block content %}
+
+<h1 class="text-center">Tasks</h1>
+<div class="container text-center">
+  <ul>
+  {% for task in tasks %}
+    <li>{{ task.title }}</li>
+  {% endfor %}
+  </ul>
+  <a href="{% url 'todo:create_task' %}">Create Task</a>
+
+  <form method="post" action="{% url 'todo:delete_all' %}">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+  </form>
+</div>
+
+
+<hr>
+
+{% endblock %}

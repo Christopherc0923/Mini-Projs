@@ -1,0 +1,165 @@
+html{
+font-size: 18px;
+color: white;
+font-family: 'Roboto', sans-serif;
+text-align: center;
+text-decoration: none;
+background: black;
+padding: 0;
+margin: 0;
+}
+
+
+/* Add some basic styling to the page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.navBar{
+  position: sticky;
+  top: 0;
+}
+
+.navBar nav {
+  background-color: #333; /* Set the background color of the nav element */
+}
+
+.navBar .left{
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+
+.navBar .right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navBar nav ul {
+  list-style: none; /* Remove the default list styling */
+  margin: 0; /* Remove the default margin */
+  padding: 0; /* Remove the default padding */
+  display: flex; /* Make the list items appear horizontally */
+}
+.navBar nav li {
+  /* Style the list items */
+  flex: 1; /* Make the list items take up equal amounts of space */
+}
+.navBar nav a {
+  /* Style the links */
+  display: block; /* Make the links fill the entire list item */
+  color: #fff; /* Set the text color of the links */
+  text-decoration: none; /* Remove the default underline */
+  padding: 20px; /* Add some padding to the links */
+}
+.navBar nav a:hover {
+  /* Style the links when hovered over */
+  background-color: #444; /* Change the background color of the links */
+}
+
+.proj, .interest, .skill{
+  padding: 0;
+  margin: 0;
+  height: 600px;
+}
+
+.proj ul, .interest ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.proj li, .interest li{
+  list-style-type: none;
+  /* border: solid 1px green; */
+  width: 25%;
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+
+.proj a, .interst a{
+  color: #fff; /* Set the text color of the links */
+  text-decoration: none; /* Remove the default underline */
+  margin: 0 10px; /* Add some space between the links */
+  border: solid 1px red;
+}
+
+
+/* Style the header */
+h1 {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h2{
+  border: solid 1px orange;
+}
+
+/* Style the main content area */
+.main-content {
+  margin: 20px;
+}
+/* Style the contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+}
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+form input, form textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+form input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+  /* Style the footer */
+  background-color: #333; /* Set the background color of the footer */
+  color: #fff; /* Set the text color of the footer */
+  padding: 20px; /* Add some padding to the footer */
+  text-align: center; /* Center the content of the footer */
+}
+
+footer h2{
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  margin: 0;
+}
+
+footer a {
+  /* Style the links */
+  color: #fff; /* Set the text color of the links */
+  text-decoration: none; /* Remove the default underline */
+  display: flex; /* Make the links appear horizontally */
+  flex: 1;
+  width: 25%;
+  justify-content: flex-start;
+  padding: 0.5rem;
+  padding-left: 2rem;
+}
+footer a:hover {
+  /* Style the links when hovered over */
+  color: #ccc; /* Change the text color of the links */
+}
