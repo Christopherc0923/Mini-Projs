@@ -24,6 +24,8 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('stock/', include('stock.urls')),
     path('todo/', include('todo.urls')),
+    path('utube/', include('utube.urls')),
+    path('pdf/', include('pdf.urls'))
 ]
 
 if settings.DEBUG:

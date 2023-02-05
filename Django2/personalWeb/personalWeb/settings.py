@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'blog',
     'stock',
     'todo',
+    'utube',
+    'pdf'
 ]
 
 MIDDLEWARE = [
