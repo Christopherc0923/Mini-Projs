@@ -1,0 +1,19 @@
+<!-- Inheriting from main.html in the main project folder-->
+{% extends 'main.html'%}
+{% load static %}
+
+{% block content %} 
+
+<div class="container text-center">
+    <h1>{{ video_title }}</h1>
+    <video width="960" height="720" controls>
+        <source src="{% static 'utube/' %}{{ video_title }}" type="video/mp4">
+    </video> 
+</div>
+
+
+<hr>
+
+<a href = "{% url 'utube:utube' %}">Back</a>
+
+{% endblock %}
