@@ -20,6 +20,9 @@ def resume(request):
 def ibm(request):
     return render(request, 'base/IBMppt.html')
 
+def eid101(request):
+    return render(request, 'base/eid101.html')
+
 # Admin
 from django.urls import reverse
 from django.shortcuts import redirect

@@ -10,6 +10,7 @@ urlpatterns = [
     path('resume/', views.resume, name="resume"),
     path('ibm/', views.ibm, name="ibm"),
     path('publication/', views.publication, name="publication"),
+    path('eid101/', views.eid101, name="eid101"),
     #path('room/', views.room, name="room"),
 
 ]

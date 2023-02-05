@@ -37,16 +37,23 @@
     <h2 class="text-center">Projects</h2>
     <div class="row">
         {% for project in projects %}
-            
-        <div class="col">
-            <h2><a href = "{{project.url}}" target ="_blank">{{project.title}}</a></h2>
-            </p>{{project.description}}</p>
-            <img src = "{{project.image.url}}" style="height: 300px; object-fit: contain">
-        </div>
+            {% if forloop.counter0|divisibleby:3 %}
+                </div>
+                <div class="row">
+                
+            {% endif %}
+                <div class="col-4">
+                    <h2 style="height: 80px"><a href = "{{project.url}}" target ="_blank">{{project.title}}</a></h2>
+                    <a href = "{{project.url}}" target ="_blank" style="height: 350px">
+                        <img src = "{{project.image.url}}" style="height: 300px; width: 100%; object-fit: contain">
+                    </a>
 
+                    <p style="height: 160px">{{project.description}}</p>
+                </div>
         {% endfor %}
     </div>
 </div>
+  
 
 
 <hr>
