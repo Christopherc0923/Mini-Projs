@@ -12,27 +12,11 @@ import requests
 def index(request):
     stocks = Stock.objects.all()
     return render(request, 'stock/index.html', {'stocks': stocks})
-'''
-def update_stocks():
-    Stock.objects.all().delete() # delete existing objects
-    stocks = ['AAPL', 'GOOG', 'MSFT', 'AMZN']
-    api_key = 'EEO2XGZO5KO1BBJI'
-    for symbol in stocks:
-        response = requests.get(f'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={symbol}&apikey=EEO2XGZO5KO1BBJI')
-        data = response.json()
-        try:
-            Stock.objects.create(
-                symbol = data['Global Quote']["01. symbol"],
-                price = data['Global Quote']['05. price'],
-                change = data['Global Quote']['09. change'],
-            )
-        except KeyError as e:
-            print(f"Key error: {e}")
-            print(data)
-'''
+
+def info(request):
+    return render(request, 'stock/info.html')
 
 from datetime import datetime, timedelta
-import requests
 
 stocks = ['AAPL', 'GOOG', 'MSFT', 'SPY']
 

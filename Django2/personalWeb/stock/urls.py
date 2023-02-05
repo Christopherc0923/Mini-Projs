@@ -7,4 +7,5 @@ app_name = "stock"
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('info/', views.info, name='info'),
 ]

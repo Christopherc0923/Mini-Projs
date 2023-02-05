@@ -17,4 +17,7 @@ def delete_all(request):
     Task.objects.all().delete()
     return redirect('todo:list_tasks')
 
-
+def delete_task(request, task_id):
+    task = Task.objects.get(id=task_id)
+    task.delete()
+    return redirect('todo:list_tasks')

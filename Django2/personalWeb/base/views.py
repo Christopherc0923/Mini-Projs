@@ -1,15 +1,18 @@
 from django.shortcuts import render
-from .models import Project, Publication
+from .models import Project, Publication, Skill
 
 
 # Create your views here.
 def home(request):
     projects = Project.objects.all()
-    return render(request, 'base/home.html', {'projects': projects})
+    skills = Skill.objects.all().order_by('title')
+    context = {'projects': projects, 'skills': skills}
+    return render(request, 'base/home.html', context)
 
 def publication(request):
     publications = Publication.objects.all()
-    return render(request, 'base/publication.html', {'publications': publications})
+    context = {'publications': publications}
+    return render(request, 'base/publication.html', context)
 
 def contact(request):
     return render(request, 'base/contact.html')

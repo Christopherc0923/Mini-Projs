@@ -8,7 +8,7 @@
 <div class="container text-center">
   <ul>
   {% for task in tasks %}
-    <li>{{ task.title }}</li>
+    <li>{{ task.title }} </li> <a href="{% url 'todo:delete_task' task.id %}">Delete</a>
   {% endfor %}
   </ul>
   <a href="{% url 'todo:create_task' %}">Create Task</a>

@@ -25,7 +25,9 @@
 
 <div class="container text-center">
     <h2>Skills</h2>
-    <p>AutoCAD, C++, Excel, JMP/JSL, MATLAB, Microsoft Office, OriginLab, Python, R, STATA, and SQL</p>
+    {% for skill in skills %}
+        <span>{{skill.title}}{% if not forloop.last %},{% endif %}</span>
+    {% endfor %}
 
 </div>
 

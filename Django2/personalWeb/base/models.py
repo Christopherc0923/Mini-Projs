@@ -12,6 +12,11 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
+class Skill(models.Model):
+    title = models.CharField(max_length=50)
+    def __str__(self):
+        return self.title
+
 class Publication(models.Model):
     # Django model fields
     title = models.CharField(max_length = 250)
