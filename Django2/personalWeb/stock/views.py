@@ -42,7 +42,7 @@ def update_stocks(time_period, stocks):
             print(f"Key error: {e}")
             print(data)
 
-update_stocks(30, stocks)
+update_stocks(10, stocks)
 
 import seaborn as sns
 import matplotlib.pyplot as plt

@@ -4,16 +4,18 @@
 
 {% block content %}
 
+<br>
 
 <div class="container">
     <div class="row">
         <h1 class="text-center"> This is the home page </h1>
+        <br>
         <div class="col">
             <img src = "{% static 'base/DiscordIcon.png' %}" style="height: 450px; object-fit: contain">
         </div>
         <div class="col">
             <h3>About me</h3>
-            <p class="text-justify">
+            <p style="text-align: justify">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor augue ut nibh dictum, eget fermentum est aliquam. Fusce velit velit, condimentum vel velit eget, auctor suscipit augue. Sed at ante viverra, lobortis risus at, fermentum dolor. Sed id viverra elit, eget malesuada magna. Sed auctor, odio in tempus feugiat, odio nulla aliquet dolor, non facilisis ipsum orci eget magna. Sed non risus vitae mi feugiat commodo. Sed euismod, lorem id fringilla tempus, ante elit suscipit erat, euismod pharetra est elit.
             </p>
         </div>
@@ -34,7 +36,7 @@
 <hr>
 
 <!--- Adding Project Model -->
-
+<br>
 <div class="container">
     <h2 class="text-center">Projects</h2>
     <div class="row">
@@ -45,12 +47,14 @@
                 
             {% endif %}
                 <div class="col-4">
-                    <h2 style="height: 80px"><a href = "{{project.url}}" target ="_blank">{{project.title}}</a></h2>
-                    <a href = "{{project.url}}" target ="_blank" style="height: 350px">
+                    <h3 class="text-center" style="height: 80px;">
+                        <a href = "{{project.url}}" style="text-decoration: none; color: black;">{{project.title}}</a>
+                    </h3>
+                    <a href = "{{project.url}}" style="height: 350px">
                         <img src = "{{project.image.url}}" style="height: 300px; width: 100%; object-fit: contain">
                     </a>
 
-                    <p style="height: 160px">{{project.description}}</p>
+                    <p style="text-align: justify; min-height: 160px;">{{project.description}}</p>
                 </div>
         {% endfor %}
     </div>

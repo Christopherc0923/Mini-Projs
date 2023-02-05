@@ -6,9 +6,9 @@
 
 <h1 class="text-center">Tasks</h1>
 <div class="container text-center">
-  <ul>
+  <ul style="list-style-type: none;">
   {% for task in tasks %}
-    <li>{{ task.title }} </li> <a href="{% url 'todo:delete_task' task.id %}">Delete</a>
+    <li>{{ task.date }} - {{ task.title }} | <a href="{% url 'todo:delete_task' task.id %}">Delete Task</a></li> 
   {% endfor %}
   </ul>
   <a href="{% url 'todo:create_task' %}">Create Task</a>
