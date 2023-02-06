@@ -27,3 +27,16 @@ class Publication(models.Model):
     # Functions that displays title on the admin page
     def __str__(self):
         return self.title
+
+class ContactForm(models.Model):
+    first_name = models.CharField(max_length=255, default='')
+    last_name = models.CharField(max_length=255, default='')
+    email = models.EmailField(default='')
+    phone_number = models.CharField(max_length=255, default='')
+    find = models.CharField(max_length=255, default='')
+    additional_info = models.TextField(default='')
+    file = models.FileField(upload_to='uploads/', default=None, blank=True, null=True)
+    terms = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.email

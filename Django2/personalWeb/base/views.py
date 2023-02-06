@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project, Publication, Skill
+from .models import Project, Publication, Skill, ContactForm
 
 
 # Create your views here.
@@ -33,3 +33,38 @@ from django.shortcuts import redirect
 def adminPage(request):
     admin_url = reverse('admin:index')
     return redirect(admin_url)
+
+def contact(request):
+    return render(request, 'base/contact.html')
+
+def contact_submit(request):
+    if request.method == 'POST':
+        first_name = request.POST.get('firstName')
+        last_name = request.POST.get('lastName')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        find = request.POST.get('find')
+        info = request.POST.get('textBox')
+        file = request.FILES.get('file')
+        term = request.POST.get('term') == "on"
+
+        contact_form = ContactForm(
+        first_name=first_name,
+        last_name=last_name,
+        email=email,
+        phone_number=phone,
+        find=find,
+        additional_info=info,
+        file=file,
+        terms=term
+        )
+
+        contact_form.save()
+
+        # Do something with the form data, such as sending an email or saving it to the database
+        
+        # Redirect to a success page
+        return render(request, 'base/contact_submit.html')
+
+    # If the request is not a POST, return the form template
+    return render(request, 'base/contact.html')

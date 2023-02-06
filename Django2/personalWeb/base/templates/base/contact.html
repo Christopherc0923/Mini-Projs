@@ -7,18 +7,20 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'base/contact.css' %}">
+
 <div class="container">
     <h1 class="text-center">Contact Us</h1>
     <p class="text-center">Please fill out the form below to contact me!</p>
     <div class="form">
-        <form>
+        <form action="{% url 'base:contact_submit' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
             <fieldset>
                 <label>First Name: <input name="firstName" type="text" required></label>
                 <label>Last Name: <input name="lastName" type="text" required></label>
             </fieldset>
             <fieldset>
                 <label>Email Address: <input name="email" type="email" required></label>
-                <label>Phone Number: <input name="email" type="tel" required></label>
+                <label>Phone Number: <input name="phone" type="tel" required></label>
             </fieldset>
             <fieldset>
                 <label>How did you find this website?
@@ -41,4 +43,5 @@
         </form>
     </div>
 </div>
+
 {% endblock %}
