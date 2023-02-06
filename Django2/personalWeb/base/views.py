@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project, Publication, Skill, ContactForm
+from .models import Project, Publication, Skill, ContactForm, ML
 
 
 # Create your views here.
@@ -34,8 +34,10 @@ def adminPage(request):
     admin_url = reverse('admin:index')
     return redirect(admin_url)
 
-def contact(request):
-    return render(request, 'base/contact.html')
+def mlproj(request):
+    MLs = ML.objects.all()
+    context = {'MLs': MLs}
+    return render(request, 'base/mlproj.html', context)
 
 def contact_submit(request):
     if request.method == 'POST':

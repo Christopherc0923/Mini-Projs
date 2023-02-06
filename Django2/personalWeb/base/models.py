@@ -40,3 +40,15 @@ class ContactForm(models.Model):
 
     def __str__(self):
         return self.email
+
+class ML(models.Model):
+    # Django model fields
+    title = models.CharField(max_length = 250)
+    description = models.TextField()
+    tech = models.TextField()
+    image = models.ImageField(upload_to ='media/')
+    url = models.URLField(blank = True)
+    
+    # Functions that displays title on the admin page
+    def __str__(self):
+        return self.title
