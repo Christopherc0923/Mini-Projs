@@ -35,7 +35,7 @@ class ContactForm(models.Model):
     phone_number = models.CharField(max_length=255, default='')
     find = models.CharField(max_length=255, default='')
     additional_info = models.TextField(default='')
-    file = models.FileField(upload_to='uploads/', default=None, blank=True, null=True)
+    file = models.FileField(upload_to='media/', default=None, blank=True, null=True)
     terms = models.BooleanField(default=False)
 
     def __str__(self):
@@ -47,6 +47,16 @@ class ML(models.Model):
     description = models.TextField()
     tech = models.TextField()
     image = models.ImageField(upload_to ='media/')
+    url = models.URLField(blank = True)
+    
+    # Functions that displays title on the admin page
+    def __str__(self):
+        return self.title
+
+class Cert(models.Model):
+    # Django model fields
+    title = models.CharField(max_length = 250)
+    date = models.DateField()
     url = models.URLField(blank = True)
     
     # Functions that displays title on the admin page

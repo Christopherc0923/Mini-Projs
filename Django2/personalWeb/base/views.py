@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project, Publication, Skill, ContactForm, ML
+from .models import Project, Publication, Skill, ContactForm, ML, Cert
 
 
 # Create your views here.
@@ -25,6 +25,11 @@ def ibm(request):
 
 def eid101(request):
     return render(request, 'base/eid101.html')
+
+def cert(request):
+    certs = Cert.objects.all()
+    context = {'certs': certs}
+    return render(request, 'base/cert.html', context)
 
 # Admin
 from django.urls import reverse
