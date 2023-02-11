@@ -13,9 +13,11 @@
   </ul>
   <a href="{% url 'todo:create_task' %}">Create Task</a>
 
+  <br>
+  
   <form method="post" action="{% url 'todo:delete_all' %}">
     {% csrf_token %}
-    <button type="submit">Delete</button>
+    <button type="submit">Delete All</button>
   </form>
 </div>
 

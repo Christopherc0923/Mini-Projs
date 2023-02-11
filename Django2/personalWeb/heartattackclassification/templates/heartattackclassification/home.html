@@ -4,7 +4,7 @@
 {% load static %}
 
 {% block content %}
-
+<link rel="stylesheet" href="{% static 'base/contact.css' %}">
 <div class="container">
     <div>
         <h1 class="text-center">Heart Attack Prediction Form</h1>
@@ -38,9 +38,7 @@
                 <div class="form-group">
                     <label>trtbps: <input name="trtbps" type="number" required></label>
                 </div>
-            </fieldset>
-            <br>
-            <fieldset>
+            
                 
                 <div class="form-group">
                     <label>Chol: <input name="chol" type="number" required></label>
@@ -64,9 +62,7 @@
                         </select>
                     </label>
                 </div>
-            </fieldset>
-            <br>
-            <fieldset>
+            
                 <div class="form-group">
                     <label>Thalachh: <input name="thalachh" type="number" required></label>
                 </div>
@@ -82,9 +78,6 @@
                 <div class="form-group">
                     <label>Oldpeak: <input name="oldpeak" type="number" required></label>
                 </div>
-            </fieldset>
-            <br>
-            <fieldset>
                 <div class="form-group">
                     <label>Slp: 
                         <select name="slp">
@@ -166,4 +159,6 @@
     </table>
 </div>
 
+
+<hr>
 {% endblock %}
