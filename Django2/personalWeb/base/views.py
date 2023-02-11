@@ -31,6 +31,9 @@ def cert(request):
     context = {'certs': certs}
     return render(request, 'base/cert.html', context)
 
+def landing(request):
+    return render(request, 'base/landing.html')
+
 # Admin
 from django.urls import reverse
 from django.shortcuts import redirect
