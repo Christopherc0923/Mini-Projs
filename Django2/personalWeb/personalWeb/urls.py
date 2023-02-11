@@ -25,7 +25,10 @@ urlpatterns = [
     path('stock/', include('stock.urls')),
     path('todo/', include('todo.urls')),
     path('utube/', include('utube.urls')),
-    path('pdf/', include('pdf.urls'))
+    path('pdf/', include('pdf.urls')),
+    path('expense/', include('expense.urls')),
+    path('heartattackclassification/', include('heartattackclassification.urls')),
+    
 ]
 
 if settings.DEBUG:

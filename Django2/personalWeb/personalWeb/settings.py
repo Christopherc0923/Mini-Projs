@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'utube',
     'pdf',
     'expense',
+    'heartattackclassification',
 ]
 
 MIDDLEWARE = [
