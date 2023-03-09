@@ -5,15 +5,19 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'base/contact.css' %}">
-<div class="container">
+<div class="container" id = "top">
     <div>
         <h1 class="text-center">Heart Attack Prediction Form</h1>
         <p class="text-center">Please note that the results are estimations and should not be used for diagnosis</p>
+        <button onclick="location.href='#result'">Go to Result Section</button>
         <form class="form text-center" action="{% url 'heartattackclassification:hac_submit' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <fieldset>
                 <div class="form-group">
-                    <label>Age: <input name="age" type="number" required></label>
+                    <label>Age: 
+                        <input name="age" type="number" required>
+                    </label>
+                    
                 </div>
                 <div class="form-group">
                     <label>Sex: 
@@ -117,7 +121,7 @@
 
 <hr>
 
-<div class="container">
+<div id="result" class="container">
     <h2 class="text-center">Previous Entries</h2>
     <table class="table text-center">
         <tr>
@@ -159,6 +163,7 @@
     </table>
 </div>
 
+<button onclick="location.href='#top'">Go to Form Section</button>
 
 <hr>
 {% endblock %}
